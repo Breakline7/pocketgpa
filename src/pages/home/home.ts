@@ -180,9 +180,6 @@ export class HomePage {
     }
 
     ionViewDidLoad() {
-        if (this.randomIntFromInterval(1, 5) == 3) {
-            this.launchInterstitial();
-        }
     }
 
     ionViewDidEnter() {
@@ -194,7 +191,9 @@ export class HomePage {
         let addModal = this.modalCtrl.create(AddCoursePage);
 
         addModal.onDidDismiss((term) => {
-
+            if (this.randomIntFromInterval(1, 5) == 3) {
+                this.launchInterstitial();
+            }
             if (term) {
                 let month: number;
                 switch (term.termseason) {
@@ -210,9 +209,6 @@ export class HomePage {
                 let d = new Date(Number(term.termyear), month);
                 term.date = d.toString();
                 this.saveItem(term);
-            }
-            if (this.randomIntFromInterval(1, 5) == 3) {
-                this.launchInterstitial();
             }
         });
 
@@ -274,6 +270,9 @@ export class HomePage {
       let detailModal = this.modalCtrl.create(CourseDetailPage, { term: term, course: course });
 
       detailModal.onDidDismiss((editedTerm) => {
+          if (this.randomIntFromInterval(1, 5) == 3) {
+              this.launchInterstitial();
+          }
           if (editedTerm) {
               if (term.termseason == editedTerm[0].termseason && term.termyear == editedTerm[0].termyear) { // the event that the old term is the same as the edited term
                   for (let i = 0; i < this.terms.length; i++) {
@@ -326,9 +325,6 @@ export class HomePage {
                   }
               }
               this.calculateGPA();
-          }
-          if (this.randomIntFromInterval(1, 5) == 3) {
-              this.launchInterstitial();
           }
       })
 
