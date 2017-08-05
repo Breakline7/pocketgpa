@@ -1,18 +1,56 @@
-<ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Home</ion-title>
+﻿<ion-header>
+  <ion-navbar class="navbar">
+    <!--<button ion-button menuToggle>
+      <ion-icon name="logo-buffer"></ion-icon>
+    </button>-->
+    <ion-title class="title">Home</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="addCourse()">
+        <ion-icon class="icon" name="add-circle"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+  <ion-card *ngFor="let term of terms">
+    <ion-card-header  style="background-color: whitesmoke;">
+      <strong>{{ term.termseason }}&nbsp;{{ term.termyear }}</strong>
+      <ion-badge class="semgpa">{{ term.GPA }}</ion-badge>
+    </ion-card-header>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+    <ion-list>
+      <ion-item-sliding *ngFor="let course of term.courses">
+        <button ion-item (click)="courseSelected(term, course)">
+          {{ course.title }}<br>
+          <small>Units: {{ course.units }}</small>
+          <ion-badge item-right>{{ course.grade }}</ion-badge>
+        </button>
+        <ion-item-options>
+          <button ion-button color="danger" (click)="removeCourse(term, course)">REMOVE</button>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+  </ion-card>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+      <ion-title class="gpa">
+        <ion-buttons>
+          <button ion-button clear color="dark" *ngIf="!showLong" (click)="toggleLong()">
+            GPA: {{ GPA }}
+          </button>
+          <button ion-button clear color="dark" *ngIf="showLong" (click)="toggleLong()">
+            GPA: {{ GPALong }}
+          </button>
+        </ion-buttons>
+      </ion-title>
+    <!--<ion-buttons end>
+      <button ion-button (click)="openSettings()">
+        <ion-icon style="font-size:30px;" name="settings"></ion-icon>
+      </button>
+    </ion-buttons>-->
+  </ion-toolbar>
+</ion-footer>
+<script src="cordova.js"></script>
