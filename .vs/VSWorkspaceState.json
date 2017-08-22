@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\resources",
+    "\\resources\\android",
+    "\\resources\\android\\splash",
+    "\\src",
+    "\\src\\pages",
+    "\\src\\pages\\about",
+    "\\src\\pages\\add-course",
+    "\\src\\pages\\course-detail",
+    "\\src\\pages\\home"
+  ],
+  "SelectedNode": "\\package.json",
+  "PreviewInSolutionExplorer": false
+}

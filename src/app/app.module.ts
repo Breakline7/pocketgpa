@@ -11,7 +11,6 @@ import { SettingsPage } from '../pages/settings/settings';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AdMobFree } from '@ionic-native/admob-free';
-import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 import { CourseDetailPage } from '../pages/course-detail/course-detail';
 import { AddCoursePage } from '../pages/add-course/add-course';
@@ -47,7 +46,6 @@ import { IonicStorageModule } from '@ionic/storage/es2015';
     StatusBar,
     SplashScreen,
     AdMobFree,
-    InAppBrowser,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Data
   ]
