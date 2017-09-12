@@ -11,6 +11,6 @@
     "\\src\\pages\\course-detail",
     "\\src\\pages\\home"
   ],
-  "SelectedNode": "\\package.json",
+  "SelectedNode": "\\src\\pages\\home\\home.ts",
   "PreviewInSolutionExplorer": false
 }

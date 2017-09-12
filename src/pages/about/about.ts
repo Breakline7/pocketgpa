@@ -1,6 +1,6 @@
 ﻿import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { AdMobFree, AdMobFreeBannerConfig, AdMobFreeInterstitialConfig } from '@ionic-native/admob-free';
+import { AdMobFree, AdMobFreeBannerConfig} from '@ionic-native/admob-free';
 
 /**
  * Generated class for the AboutPage page.
