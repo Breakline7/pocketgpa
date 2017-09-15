@@ -5,12 +5,12 @@
     "\\resources\\android",
     "\\resources\\android\\splash",
     "\\src",
+    "\\src\\app",
     "\\src\\pages",
     "\\src\\pages\\about",
     "\\src\\pages\\add-course",
-    "\\src\\pages\\course-detail",
-    "\\src\\pages\\home"
+    "\\src\\pages\\course-detail"
   ],
-  "SelectedNode": "\\src\\pages\\home\\home.ts",
+  "SelectedNode": "\\src\\app\\app.component.ts",
   "PreviewInSolutionExplorer": false
 }

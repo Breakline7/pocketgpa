@@ -1,7 +1,6 @@
 ﻿import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
+import { NavController, NavParams, ViewController } from 'ionic-angular';
 import { Data } from '../../providers/data/data';
-import { HomePage } from '../home/home'
 
 /**
  * Generated class for the CourseDetailPage page.
@@ -9,7 +8,6 @@ import { HomePage } from '../home/home'
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
-@IonicPage()
 @Component({
   selector: 'page-course-detail',
   templateUrl: 'course-detail.html',
@@ -24,23 +22,23 @@ export class CourseDetailPage {
 
         this.newTerm = navParams.get('term');
         this.newCourse = navParams.get('course');
-        this.editedTerm = 
+        this.editedTerm =
         [{
           termyear: this.newTerm.termyear,
           termseason: this.newTerm.termseason,
           GPALong: this.newTerm.GPALong,
           GPA: this.newTerm.GPA,
           un: this.newTerm.un,
-          courses: 
+          courses:
             [{
                 title: this.newCourse.title,
                 units: this.newCourse.units,
                 grade: this.newCourse.grade,
                 id: this.newCourse.id
             }]
-                
+
         }]
-        
+
         this.grades = [
             {
                 letter: 'A+',

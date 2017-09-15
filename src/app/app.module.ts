@@ -16,7 +16,6 @@ import { CourseDetailPage } from '../pages/course-detail/course-detail';
 import { AddCoursePage } from '../pages/add-course/add-course';
 import { Data } from '../providers/data/data';
 import { IonicStorageModule } from '@ionic/storage/es2015';
-//smelly pickles
 
 @NgModule({
   declarations: [

@@ -33,7 +33,7 @@ export class MyApp {
   }
 
   initializeApp() {
-    this.platform.ready().then(() => {
+      this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
         let bannerConfig: AdMobFreeBannerConfig = {
@@ -46,6 +46,10 @@ export class MyApp {
         this.admob.banner.prepare().then(() => {
             // success
         }).catch(e => console.log(e));
+
+        this.statusBar.styleDefault();
+        this.splashScreen.hide();
+        
     });
   }
 
