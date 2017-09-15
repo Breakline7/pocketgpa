@@ -1,6 +1,6 @@
 ﻿import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { AdMobFree, AdMobFreeBannerConfig} from '@ionic-native/admob-free';
+import { AdMobFree} from '@ionic-native/admob-free';
 
 /**
  * Generated class for the AboutPage page.
@@ -19,20 +19,5 @@ export class AboutPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AboutPage');
-  }
-  showBanner() {
-
-      let bannerConfig: AdMobFreeBannerConfig = {
-          isTesting: true, // Remove in production
-          autoShow: true
-          //id: Your Ad Unit ID goes here
-      };
-
-      this.admob.banner.config(bannerConfig);
-
-      this.admob.banner.prepare().then(() => {
-          // success
-      }).catch(e => console.log(e));
-
   }
 }

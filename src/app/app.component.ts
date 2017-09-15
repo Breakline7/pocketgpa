@@ -7,7 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { TipsPage } from '../pages/tips/tips';
 import { AboutPage } from '../pages/about/about';
 import { SettingsPage } from '../pages/settings/settings';
-import { AdMobFree, AdMobFreeBannerConfig } from '@ionic-native/admob-free';
+import { AdMobFree} from '@ionic-native/admob-free';
 
 @Component({
   templateUrl: 'app.html'
@@ -36,20 +36,10 @@ export class MyApp {
       this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
-        let bannerConfig: AdMobFreeBannerConfig = {
-            autoShow: true,
-            id: 'ca-app-pub-5686363028654312/1418490080'
-        };
-
-        this.admob.banner.config(bannerConfig);
-
-        this.admob.banner.prepare().then(() => {
-            // success
-        }).catch(e => console.log(e));
 
         this.statusBar.styleDefault();
         this.splashScreen.hide();
-        
+
     });
   }
 

@@ -5,7 +5,7 @@ import { AddCoursePage } from '../add-course/add-course';
 import { SettingsPage } from '../settings/settings';
 import { Data } from '../../providers/data/data';
 import { ToastController } from 'ionic-angular';
-import { AdMobFree, AdMobFreeBannerConfig, AdMobFreeInterstitialConfig } from '@ionic-native/admob-free';
+import { AdMobFree, AdMobFreeInterstitialConfig } from '@ionic-native/admob-free';
 
 @Component({
   selector: 'page-home',
@@ -91,22 +91,6 @@ export class HomePage {
                 gradepoints: 0
             },
         ];
-    }
-
-    showBanner() {
-
-        let bannerConfig: AdMobFreeBannerConfig = {
-            //isTesting: true, // Remove in production
-            autoShow: true,
-            id: 'ca-app-pub-5686363028654312/8504912616'
-        };
-
-        this.admob.banner.config(bannerConfig);
-
-        this.admob.banner.prepare().then(() => {
-            // success
-        });
-
     }
 
     launchInterstitial() {
@@ -216,7 +200,7 @@ export class HomePage {
     }
 
     saveNotification() {
-        
+
         let toast = this.toastCtrl.create({
             message: 'Your course has been saved.',
             duration: 1000,
@@ -276,7 +260,7 @@ export class HomePage {
               if (term.termseason == editedTerm[0].termseason && term.termyear == editedTerm[0].termyear) { // the event that the old term is the same as the edited term
                   for (let i = 0; i < this.terms.length; i++) {
                       if (this.terms[i].termseason == term.termseason && this.terms[i].termyear == term.termyear) { // find and enter the term in the actual terms array
-                          for (let j = 0; j < this.terms[i].courses.length; j++) { 
+                          for (let j = 0; j < this.terms[i].courses.length; j++) {
                               if (this.terms[i].courses[j].id == editedTerm[0].courses[0].id) { // find and enter the actual courses array
                                   this.terms[i].courses.splice(j, 1, editedTerm[0].courses[0]); // splice in the edited course
                                   this.calculateSemester(this.terms[i]);
