@@ -1,6 +1,6 @@
 ﻿import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { IonicApp, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -16,6 +16,14 @@ import { CourseDetailPage } from '../pages/course-detail/course-detail';
 import { AddCoursePage } from '../pages/add-course/add-course';
 import { Data } from '../providers/data/data';
 import { IonicStorageModule } from '@ionic/storage/es2015';
+
+declare var window;
+
+export class MyErrorHandler implements ErrorHandler {
+  handleError(err: any): void {
+    window.Ionic.handleNewError(err);
+  }
+}
 
 @NgModule({
   declarations: [
@@ -46,7 +54,7 @@ import { IonicStorageModule } from '@ionic/storage/es2015';
     StatusBar,
     SplashScreen,
     AdMobFree,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    {provide: ErrorHandler, useClass: MyErrorHandler},
     Data
   ]
 })
