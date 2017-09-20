@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="dbiggs.academe" version="0.0.6" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">&gt;
-                                                                                                                                                        <name>AcadeMe</name>
+<widget id="dbiggs.academe" version="0.0.7" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">&gt;
+                                                                                                                                                                                                        <name>AcadeMe</name>
     <description>Academic Tracker</description>
     <author email="biggs.dg@gmail.com" href="http://ionicframework.com/">David Biggs</author>
     <content src="index.html" />
