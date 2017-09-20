@@ -7,7 +7,6 @@ import { HomePage } from '../pages/home/home';
 import { TipsPage } from '../pages/tips/tips';
 import { AboutPage } from '../pages/about/about';
 import { SettingsPage } from '../pages/settings/settings';
-import { AdMobFree} from '@ionic-native/admob-free';
 
 @Component({
   templateUrl: 'app.html'
@@ -19,7 +18,7 @@ export class MyApp {
 
   pages: Array<{title: string, icon: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public admob: AdMobFree) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation

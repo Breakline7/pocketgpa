@@ -26,6 +26,7 @@
         "@ionic-native/status-bar": "3.12.1",
         "@ionic/storage": "2.0.1",
         "ajv": "^5.2.2",
+        "app-scripts": "0.0.0",
         "cordova": "^7.0.1",
         "cordova-admob-sdk": "^0.8.0",
         "cordova-android": "^6.2.3",
@@ -43,18 +44,18 @@
         "ionic-angular": "3.5.0",
         "ionicons": "3.0.0",
         "rxjs": "^5.4.0",
+        "superagent": "^3.6.0",
         "sw-toolbox": "3.6.0",
         "zone.js": "0.8.12"
     },
     "devDependencies": {
         "@ionic/app-scripts": "^2.1.4",
-        "ionic": "^3.8.1",
+        "ionic": "3.10.3",
         "typescript": "2.3.4"
     },
     "description": "An Ionic project",
     "cordova": {
         "plugins": {
-            "cordova-plugin-admob-free": {},
             "cordova-plugin-console": {},
             "cordova-plugin-splashscreen": {},
             "cordova-plugin-statusbar": {},
@@ -65,7 +66,8 @@
                 "UPDATE_METHOD": "background",
                 "UPDATE_API": "https://api.ionicjs.com",
                 "MAX_STORE": "2"
-            }
+            },
+            "cordova-plugin-admob-free": {}
         },
         "platforms": [
             "android",
