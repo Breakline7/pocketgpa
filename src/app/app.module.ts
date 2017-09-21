@@ -4,9 +4,9 @@ import { IonicApp, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { TipsPage } from '../pages/tips/tips';
-import { AboutPage } from '../pages/about/about';
-import { SettingsPage } from '../pages/settings/settings';
+//import { TipsPage } from '../pages/tips/tips';
+//import { AboutPage } from '../pages/about/about';
+//import { SettingsPage } from '../pages/settings/settings';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -31,9 +31,9 @@ export class MyErrorHandler implements ErrorHandler {
     HomePage,
     CourseDetailPage,
     AddCoursePage,
-    TipsPage,
-    AboutPage,
-    SettingsPage
+//    TipsPage,
+//    AboutPage,
+//    SettingsPage
   ],
   imports: [
     BrowserModule,
@@ -46,9 +46,9 @@ export class MyErrorHandler implements ErrorHandler {
     HomePage,
     CourseDetailPage,
       AddCoursePage,
-      TipsPage,
-      AboutPage,
-      SettingsPage
+//      TipsPage,
+//      AboutPage,
+//      SettingsPage
   ],
   providers: [
     StatusBar,

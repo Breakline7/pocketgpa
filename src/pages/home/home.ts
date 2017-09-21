@@ -2,7 +2,7 @@
 import { ModalController, NavController, NavParams, Nav } from 'ionic-angular';
 import { CourseDetailPage } from '../course-detail/course-detail';
 import { AddCoursePage } from '../add-course/add-course';
-import { SettingsPage } from '../settings/settings';
+//import { SettingsPage } from '../settings/settings';
 import { Data } from '../../providers/data/data';
 import { ToastController } from 'ionic-angular';
 import { AdMobFree, AdMobFreeInterstitialConfig } from '@ionic-native/admob-free';
@@ -109,10 +109,10 @@ export class HomePage {
 
     }
 
-    openSettings() {
-        console.log('open settings?')
-        this.navCtrl.setRoot(SettingsPage);
-    }
+//    openSettings() {
+//        console.log('open settings?')
+//        this.navCtrl.setRoot(SettingsPage);
+//    }
 
     toggleLong() {
         this.showLong = !this.showLong;
@@ -167,6 +167,26 @@ export class HomePage {
     }
 
     ionViewDidEnter() {
+      console.log(this.terms.length);
+      if (this.terms.length == 0) {
+        let exampleTerm = {
+            courses: [
+                {
+                title: "Swipe left to delete -- example",
+                grade: "A-",
+                units: "3",
+                id: 7124725090380564,
+                },
+                ],
+            termseason: "Summer",
+            termyear: "2019",
+            GPALong: 3.70,
+            GPA: "3.70",
+            un: 3,
+            date: "Mon Jul 01 2019 00:00:00 GMT-0500 (Central Daylight Time)",
+        };
+        this.saveItem(exampleTerm);
+      }
     }
 
     addCourse() {
